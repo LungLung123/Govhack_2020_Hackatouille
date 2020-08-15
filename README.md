@@ -1,7 +1,7 @@
 # Govhack_2020_Hackatouille
 
-# Dev React server
+## Dev React server
 cd client
 npm start
 
-# Production Build Server
+## Production Build Server
