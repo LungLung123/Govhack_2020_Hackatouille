@@ -1,10 +1,5 @@
 import React from 'react';
 import '../App.css';
-import Card from '@material-ui/core/Card';
-import bannerImage from '../images/hero.png';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 import { useHistory } from 'react-router-dom';
 
 import Form from './Form'
@@ -24,37 +19,37 @@ class Business extends React.Component{
   }
 
   render() {
-    const foods =['Sugar', 'Honey', 'Ice', 'Tea']
-    const Prices = ["$4", "$2", "$0.60", "$0.09" ]
-    const items = []
-
-    for (const [index, value] of foods.entries()) {
-      items.push(
-                  <Grid container justify="center" spacing={5}>
-                    <Card className="card" key={index}>
-                      <CardContent>
-                        <img alt="Happy Man sitting" src={bannerImage} width="250px"/>
-                        <Typography>
-                          {value}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Grid>
-      )
-    }
+    const foods =[{'name':'Sugar', 'price':'$4'}, {'name': 'Rice', 'price':'$2'}, {'name': 'Laptop', 'price':'$0.60'}, {'name': 'Curry', 'price':'$0.09'}]
     return (
-            <div>
-              <div className="">
+            <div className="contentWrapper">
+              <div className="jumbotron">
                 <h1>Welcome Back {this.state.name}</h1>
+                <h3>View your inventory and curated care packages</h3>
+                <div className="alert"><strong>Note: </strong>The data here is static for the sake of the hackathon. This would a separate flow only accessible to businesses</div>              
               </div>
-              <div>
-                  <h3>
-                    {items}
-                  </h3>
+              <div className="cardWrapper">
+                { 
+                  foods.map(
+                    (item, index) => ( 
+                        <div className="card" key={index}>
+                          <h4 className="cardTitle">{item.name}</h4>
+                          <p className="cardDescription">
+                            <ul>
+                              <li>Item Description</li>
+                              <li>Lorem Ipsum</li>
+                              <li>Lorem Ipsum</li>
+                              <li>Lorem Ipsum</li>
+                              <li>Price {item.price}</li>
+                            </ul>
+                          </p>
+                        </div>
+                    )
+                  )
+                }
+              </div>
                   <button type="button" className="primaryButton" onClick={this.routeChange}>
-                    Create New Item
+                    Create New Item (WIP)
                 </button>
-              </div>
             </div>
     );
   }
