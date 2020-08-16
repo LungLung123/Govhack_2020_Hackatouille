@@ -47,9 +47,11 @@ class Business extends React.Component{
                   )
                 }
               </div>
-                  <button type="button" className="primaryButton" onClick={this.routeChange}>
-                    Create New Item (WIP)
-                </button>
+                <div className="buttonWrapper">
+                  <button type="button" className="primaryButton" align="center" onClick={this.routeChange}>
+                      Create New Item
+                  </button>
+                </div>
             </div>
     );
   }

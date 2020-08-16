@@ -114,9 +114,9 @@
   outline: none;
 }
 
-/*.contentWrapper {
-  background-color: #FFFFEB;
-}*/
+.buttonWrapper {
+  text-align: center;
+}
 
 .jumbotron {
   text-align: center;
