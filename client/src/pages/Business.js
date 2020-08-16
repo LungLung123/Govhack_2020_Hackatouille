@@ -25,7 +25,7 @@ class Business extends React.Component{
               <div className="jumbotron">
                 <h1>Welcome Back {this.state.name}</h1>
                 <h3>View your inventory and curated care packages</h3>
-                <div className="alert"><strong>Note: </strong>The data here is static for the sake of the hackathon. This would a separate flow only accessible to businesses</div>              
+                <div className="alert"><strong>Note: </strong>The data here is static for the sake of the hackathon. This would be a separate flow only accessible to businesses</div>              
               </div>
               <div className="cardWrapper">
                 { 
