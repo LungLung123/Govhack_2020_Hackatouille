@@ -23,8 +23,9 @@
   margin: 0;
   padding: 2rem 0rem;
   width: 100%;
-  position: absolute;
+  position: relative;
   text-align: center;
+  left: -10vw;
 }
 
 .navbar li {
@@ -39,7 +40,8 @@
 
 .navbar a {
   text-decoration: none;
-  padding: 2rem
+  padding: 2rem;
+  color: black;
 }
 
 .navbar a:visited {
@@ -119,7 +121,11 @@
 .jumbotron {
   text-align: center;
   background-color: #FFFFFF;
-  padding: 3rem;
+  padding: 5rem;
+}
+
+.jumbotron h3 {
+  font-weight: 400;
 }
 
 .jumbotron h1 {
@@ -156,15 +162,78 @@
   outline: none;
 }
 
+.noResults {
+  text-align: center;
+}
+
+.alert {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #2E3B46;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  margin: 1rem 0rem;
+  max-width: 40%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 10rem;
+  flex-direction: row;
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 4px;
+  padding: 0rem 0rem 2rem 0rem;
+  margin-bottom: 1rem!important;
+  max-width: 45%;
+  width: 45%;
+  margin: auto;
+}
+
+.card h4 {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
 @media only screen and (max-width: 1700px) {
   .leftCTA {
     padding: 0rem 10rem;
   }
 }
 
+@media only screen and (max-width: 1600px) {
+  .cardWrapper {
+    padding: 0rem 1rem;
+  }
+  .card {
+    width: 40%;
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .leftCTA {
     padding: 0rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .alert {
+    max-width: 70%;
+    width: 70%;
   }
 }
 
@@ -183,12 +252,30 @@
   }
   .navbar ul {
     text-align: right;
+    left: 0;
   }
   .navbar p {
     padding: 0;
   }
   .navbar a {
     padding: 1rem;
+  }
+  .navbar ul {
+    padding: 1rem 0rem;
+  }
+  .navbar span {
+    padding: 1rem 0rem;
+  }
+  .alert {
+    max-width: 90%;
+    width: 90%;
+  }
+  .jumbotron {
+    padding: 5rem 2rem;
+  }
+  .card {
+    width: 80%;
+    max-width: 80%;
   }
 }
 
@@ -198,5 +285,17 @@
   }
   .leftCTA {
     padding: 0rem 2rem;
+  }
+  .jumbotron input {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .jumbotron .searchButton {
+    min-width: 100px;
+  }
+  .jumbotron {
+    padding: 3rem 1rem;
   }
 }
