@@ -9,6 +9,7 @@ import {
 import Home from './pages/Home.js'
 import Browse from './pages/Browse.js'
 import MyMap from './pages/MyMap.js'
+import Business from './pages/Business';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
                 </li>
                 <li>
                   <Link to="/mymap">MyMap</Link>
+  
+                </li>
+                <li>
+                  <Link to="/business">Business</Link>
                 </li>
               </ul>
             </nav>
@@ -42,6 +47,9 @@ function App() {
             </Route>
             <Route path="/mymap">
               <MyMap />
+            </Route>
+            <Route path="/business">
+              <Business />
             </Route>
           </Switch>
         </div>
