@@ -1,28 +1,19 @@
-import React from 'react';
-import Map from './components/placeSearch';
+import React, { Component } from 'react';
+import Map from './components/Map';
 
-class MyMap extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      map: {}
-    }
-  } 
-
-  handleMapLoad = (map) => {
-    this.setState({
-      map: map
-    })
-  }
-
+class MyMap extends Component {
   render() {
-    return (
-      <div className="App">
-        <Map id="myMap" options={{center: { lat: 51.501904, lng: -0.115871 }, zoom: 13}}    onMapLoad = {this.handleMapLoad}/>  
-      </div>
-
-    );
+    return(
+        <div>
+        <Map
+     google={this.props.google}
+     center={{lat: -33.865143, lng: 151.209900}}
+     height='300px'
+     width='30px'
+     zoom={15}
+    />
+    </div>
+      )
   }
 }
-
 export default MyMap;
